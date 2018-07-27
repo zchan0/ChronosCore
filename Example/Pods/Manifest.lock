@@ -1,0 +1,16 @@
+PODS:
+  - ChronosCore (0.1.0)
+
+DEPENDENCIES:
+  - ChronosCore (from `../`)
+
+EXTERNAL SOURCES:
+  ChronosCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ChronosCore: adf8d56a06cab504d7d4a4834a94063a4713f05b
+
+PODFILE CHECKSUM: 39b3e280ef9f99c593af78c5d8356d71e4299f6a
+
+COCOAPODS: 1.5.3

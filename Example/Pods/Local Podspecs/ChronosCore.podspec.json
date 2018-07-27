@@ -1,0 +1,22 @@
+{
+  "name": "ChronosCore",
+  "version": "0.1.0",
+  "summary": "A short description of ChronosCore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zchan0/ChronosCore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zchan0": "zchan0@outlook.com"
+  },
+  "source": {
+    "git": "https://github.com/zchan0/ChronosCore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ChronosCore/Classes/**/*"
+}
