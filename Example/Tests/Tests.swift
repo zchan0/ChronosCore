@@ -21,9 +21,9 @@ class Tests: XCTestCase {
     }
     
     func testNumberOfDays() {
-        if let startDate = Date.dateFromString("2018-07-23 18:42"),
-            let endDate = Date.dateFromString("2018-07-23 23:59") {
-            XCTAssertEqual(Calendar.current.numberOfMidnights(ofStartDate: startDate, endDate), 0)
+        if let startDate = Date.dateFromString("2010-01-14 23:30"),
+            let endDate = Date.dateFromString("2010-01-15 08:00") {
+            XCTAssertEqual(Calendar.current.numberOfDays(ofStartDate: startDate, endDate), 0)
         }
     }
     
@@ -32,12 +32,12 @@ class Tests: XCTestCase {
             XCTAssertEqual(Calendar.current.isDateInWeek(date), false)
         }
     }
-    
-    func testBeginningOfWeek() {
-        if let beginningDate = Calendar.current.beginningOfWeek() {
-            let beginning: String = Date.stringFromDate(beginningDate)
-            XCTAssertEqual(beginning, "2018-07-22")
-        }
-    }
+// comment this case since it might fail even the result is correct
+//    func testBeginningOfWeek() {
+//        if let beginningDate = Calendar.current.beginningOfWeek() {
+//            let beginning: String = Date.stringFromDate(beginningDate)
+//            XCTAssertEqual(beginning, "2018-07-22")
+//        }
+//    }
     
 }

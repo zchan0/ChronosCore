@@ -22,7 +22,7 @@ public extension Date {
     static func date(byAddingSeconds seconds: Int,
                      toDate date: Date,
                      withCalendar calendar: Calendar = Calendar.current) -> Date? {
-        return Calendar.current.date(byAdding: .second, value: seconds, to: date)
+        return calendar.date(byAdding: .second, value: seconds, to: date)
     }
     
     struct FormatterCache {
@@ -50,6 +50,14 @@ public extension Date {
         return formatter!.date(from: dateString)
     }
     
+    
+    /// convert Date to String with DateFormatter
+    ///
+    /// - Parameters:
+    ///   - date:
+    ///   - fmt: for the formatter.dateFormat, default value is "yyyy-MM-dd"
+    ///   - calendar: for the formatter.calendar, default value is Calendar.current
+    /// - Returns: String
     static func stringFromDate(_ date: Date,
                                withFormatter fmt: String = "yyyy-MM-dd",
                                withCalendar calendar: Calendar = Calendar.current) -> String {
@@ -67,6 +75,13 @@ public extension Date {
 }
 
 public extension Calendar {
+    /// this approach works for other calendar units by specifying a different `NSCalendarUnit` value for the `ordinalityOfUnit:` parameter.
+    /// for example, you can calculate the number of years based on the number of times Jan 1, 12:00 AM is present between.
+    ///
+    /// - Parameters:
+    ///   - startDate:
+    ///   - endDate:
+    /// - Returns: Number of midnights
     func numberOfMidnights(ofStartDate startDate: Date, _ endDate: Date) -> Int {
         if let startDay = self.ordinality(of: .day, in: .era, for: startDate),
             let endDay = self.ordinality(of: .day, in: .era, for: endDate) {
@@ -75,10 +90,22 @@ public extension Calendar {
         return 0
     }
     
+    /// the difference between `numberOfDays:` and `numberOfMidnights` is that the previous one regards >24h as a day
+    /// for example, try "2010-01-14 23:30" and "2010-01-15 08:00" and the result is 0
+    ///
+    /// - Parameters:
+    ///   - startDate:
+    ///   - endDate:
+    /// - Returns: Number of days(more than 24h)
     func numberOfDays(ofStartDate startDate: Date, _ endDate: Date) -> Int? {
         return self.dateComponents([.day], from: startDate, to: endDate).day
     }
     
+    /// check when a date falls
+    ///     credits: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/Articles/dtCalendricalCalculations.html#//apple_ref/doc/uid/TP40007836-SW9
+    ///
+    /// - Parameter date:
+    /// - Returns: true of false
     func isDateInWeek(_ date: Date) -> Bool {
         var startDate: NSDate?
         var extends: TimeInterval = 0
