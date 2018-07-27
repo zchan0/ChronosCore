@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ChronosCore_Tests' do
+  pod 'ChronosCore', :path => '../'
+  
+  
+end
