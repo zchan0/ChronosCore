@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0747CA125C3B5D1D9373B58A437A0F1F /* Pods-ChronosCore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5151A81824A34A85819DD8795A183C1C /* Pods-ChronosCore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		513E0ED590DFF4BC494E69FC3D5BDD0E /* ChronosCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB734FF93568CF9F6CB27C8C4C5E2B /* ChronosCore-dummy.m */; };
-		8B643052210AFB3800168D06 /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B643050210AFB3800168D06 /* NumberExtension.swift */; };
-		8B643053210AFB3800168D06 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B643051210AFB3800168D06 /* DateExtension.swift */; };
+		8B643056210B00E600168D06 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B643054210B00E600168D06 /* DateExtension.swift */; };
+		8B643057210B00E600168D06 /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B643055210B00E600168D06 /* NumberExtension.swift */; };
 		B1C41B0844C31DF680CFCFBF54799948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B77F0DDBED95CA15A12094061BD6A00B /* ChronosCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F5C8D24F19A261D71152C98AE8844F /* ChronosCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3F32AAE29EB10F57DE2DD3C0E0D174F /* Pods-ChronosCore_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 926A5DF0DA892B9D5893855CF3CB3245 /* Pods-ChronosCore_Tests-dummy.m */; };
@@ -41,8 +41,8 @@
 		7484127894382E58D1B696A9A7B7BB11 /* ChronosCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ChronosCore.modulemap; sourceTree = "<group>"; };
 		75F5C8D24F19A261D71152C98AE8844F /* ChronosCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChronosCore-umbrella.h"; sourceTree = "<group>"; };
 		7DDB734FF93568CF9F6CB27C8C4C5E2B /* ChronosCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChronosCore-dummy.m"; sourceTree = "<group>"; };
-		8B643050210AFB3800168D06 /* NumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtension.swift; sourceTree = "<group>"; };
-		8B643051210AFB3800168D06 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		8B643054210B00E600168D06 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ChronosCore/Classes/DateExtension.swift; sourceTree = "<group>"; };
+		8B643055210B00E600168D06 /* NumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberExtension.swift; path = ChronosCore/Classes/NumberExtension.swift; sourceTree = "<group>"; };
 		926A5DF0DA892B9D5893855CF3CB3245 /* Pods-ChronosCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChronosCore_Tests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4F4DE6D55AB80C9B1DB4CDC5A46960D /* Pods-ChronosCore_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChronosCore_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 		2792B349F38B6DC1D281314C82CD64AF /* ChronosCore */ = {
 			isa = PBXGroup;
 			children = (
-				8B643051210AFB3800168D06 /* DateExtension.swift */,
-				8B643050210AFB3800168D06 /* NumberExtension.swift */,
+				8B643054210B00E600168D06 /* DateExtension.swift */,
+				8B643055210B00E600168D06 /* NumberExtension.swift */,
 				6C466F8BEA0A2ADA58060C5542996303 /* Pod */,
 				6661195F82C6DBF285D6B3A1E8F431C3 /* Support Files */,
 			);
@@ -279,8 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				513E0ED590DFF4BC494E69FC3D5BDD0E /* ChronosCore-dummy.m in Sources */,
-				8B643053210AFB3800168D06 /* DateExtension.swift in Sources */,
-				8B643052210AFB3800168D06 /* NumberExtension.swift in Sources */,
+				8B643056210B00E600168D06 /* DateExtension.swift in Sources */,
+				8B643057210B00E600168D06 /* NumberExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

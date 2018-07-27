@@ -26,9 +26,10 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Cencen Zheng' => 'zhengcc124@gmail.com' }
   s.source           = { :git => 'https://github.com/zchan0/ChronosCore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/cisssyz'
+  s.social_media_url = 'https://twitter.com/cisssyz'
 
   s.ios.deployment_target = '10.0'
+  s.swift_version = '4.0'
 
   s.source_files = 'ChronosCore/Classes/**/*'
   
