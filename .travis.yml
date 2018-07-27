@@ -12,8 +12,8 @@ before_install:
 - brew update
 - brew outdated xctool || brew upgrade xctool
 script:
-- xcodebuild test -workspace Example/ChronosSwift.xcworkspace -scheme ChronosSwift-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.4' build-for-testing ONLY_ACTIVE_ARCH=NO
-- xctool run-tests -workspace Example/ChronosSwift.xcworkspace -scheme ChronosSwift-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- pod lib lint --allow-warnings
-- pod spec lint --allow-warnings
-- pod trunk push --allow-warnings
+- xcodebuild test -workspace Example/ChronosCore.xcworkspace -scheme ChronosCore-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.4' build-for-testing ONLY_ACTIVE_ARCH=NO
+- xctool run-tests -workspace Example/ChronosCore.xcworkspace -scheme ChronosCore-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- pod lib lint 
+- pod spec lint 
+- pod trunk push 
